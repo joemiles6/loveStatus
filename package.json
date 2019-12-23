@@ -1,0 +1,19 @@
+{
+  "name": "flames",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start" : "node src/index.js ",
+    "dev" : "nodemon src/index.js -e js,hbs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+max-width: 100%;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.classic {
+    display: flex;
+    background: rgb(255, 131, 131);
+    padding: 16px;
+    min-height: 1vh;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.fa-bars{
+    font-size: 16px;
+    color: #cccccc;
+    cursor: pointer;
+    display: none;
+}
+
+.fa-bars:hover{
+    color: #ececec;
+}
+.classic  a {
+    text-decoration: none;
+    color: #fff;
+   
+}
+section{
+    flex-grow: 1;
+    display: grid;
+    grid-template: 100% / auto 400px;
+
+}
+.intergrate {
+    position: relative;
+    background: rgb(248, 243, 243);
+}
+.status {
+    z-index: 1;
+    overflow-x: scroll;
+    background: rgb(216, 216, 216);
+}
+.channels *{
+    margin: 10px;
+}
+form{
+    padding-top: 50px;
+}
+.male, .female{
+    width : 100%;
+    position: relative;
+}
+
+input[type="text"] {
+    margin: 50px;
+    border: 1px solid #8e8e8e;
+    color: #212121;
+    width : 30%;
+    padding: 10px 5px 10px 30px;
+    outline-color: pink;
+    border-radius: 5px;
+
+}
+input[type="text"]:focus{
+    transition: .5s all;
+    width: 80%;
+}
+button{
+    margin: 50px;
+    padding: 10px;
+    border: 1px solid#8e8e8e;
+    background: transparent;
+    color: #212121;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:focus{
+    background: #ccc;
+    color: #fff;
+    outline: none;
+}
+.genderIcon{
+position: absolute;
+left: 60px;
+top: 60px;
+}
+.statusMain {
+    border-bottom: 1px solid #333;
+    line-height: 50px;
+    background: #313131;
+    color: azure;
+    font-size: 20px
+}
+.loader{
+    margin: 10px;
+    background: #ece6e6;
+    border: 1px solid #3333;
+    
+}
+.lodash{
+    font-size: 2em;
+    padding: 16px;
+    color: #838383;
+    display:none
+   
+}
+::-webkit-scrollbar{
+    width: 10px;
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    height: 1vh;
+    background: #313141;
+
+}
+.history{
+    padding: 10px;
+}
+.history  p {
+    color: #ccc;
+    text-align: right;
+    cursor: pointer;
+}
+.switch {
+    cursor: pointer;
+    position: absolute;
+    font-size: 1.2em;
+    padding-top: 16px;
+    color: #dddddd;
+    right: 0px;
+   margin-right: 10px;
+   padding:20px;
+   border-radius: 100px;
+
+}
+.switch:hover {
+  background: rgba(230, 9, 9, 0.2);
+}
+.topSwitch{
+    position: relative;
+    margin-top: 50px;
+    
+}
+footer{
+color: #d6d6d6 ;
+padding:10px;
+border-top: 2px solid #eee;
+display: flex;
+justify-content: space-between;
+}
+
+.stage {
+    border-bottom: #313131;
+}
+
+
+.table{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background: #1111;
+    padding: 6px;
+}
+
+.tradeMark {
+    background: #7270f1;
+    padding: 16px;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+}
+.tradeMark::after{
+    content: '';
+    display: block;
+    border: 1px solid #333;
+}
+.name {
+    color: #5a5a5a;
+    font-weight: bold;
+    width: 60%;
+    float: left;
+}
+.cancel{
+    color: #666;
+    cursor: pointer;
+
+}
+.cancel:hover{
+    color: rgba(250, 54, 54, 0.664);
+}
+.count {
+    text-align: center;
+    font-size: 3em;
+    padding: 16px;
+    color: #ffff;
+    animation: blink .6s 4 1s linear;
+}
+
+@keyframes blink {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.guess a{
+    text-decoration: none;
+    color: #313131;
+    margin-right: 10px;
+    display: none;
+}
+
+
+/* _____________________ mobile phone ____________ responsive  */
+
+@media only screen and (max-width: 769px) {
+  /* For mobile phones: */
+.fa-bars {
+    display: block;
+}
+.channels a {
+    display: none;
+}
+.guess a {
+    display: inline-block;
+}
+.classic {
+    
+    background: transparent;
+    border-bottom: 1px solid #2121;
+   
+}
+.classic  a {
+    color: rgb(245, 105, 105);
+   
+}
+section{
+    flex-grow: 1;
+    display: grid;
+    grid-template: 100% / 1fr;
+}
+.intergrate{
+    width: 100%;
+}
+.status {
+    display: none
+}
+.male, .female{
+    width : 100%;
+    position: relative;
+}
+input[type="text"]:focus{
+    transition: .5s all;
+    width: 50%
+}
+
+
+}
+
+@media only screen and (min-width: 1000px) {
+    section{
+        flex-grow: 1;
+        display: grid;
+        grid-template: 100% / auto 400px;
+    }
+    
+}
